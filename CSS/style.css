@@ -33,7 +33,41 @@
 
 img {
     height: 100%;
-   
-
     
+}
+
+.down, .up {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #444;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+
+.up {
+    top: 0;
+}
+
+.down {
+    bottom: 0;
+}
+
+.up:hover, .down:hover {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.fa-angle-up {
+    margin-top: 5px;
+}
+
+.fa-angle-down {
+    margin-top: 10px;
 }
