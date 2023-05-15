@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+    background-color: aqua;
+}
+
+.slider {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+}
+
+.items.active {
+    display: block;
+}
+
+.item {
+    display: none;
+    overflow: hidden;
+    height: 70vh;
+    text-align: center;
+    
+}
+
+img {
+    height: 100%;
+   
+
+    
+}
