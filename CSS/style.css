@@ -19,15 +19,22 @@
     background-color: blue;
 }
 
-.items.active {
+.active {
     display: block;
 }
 
 .item {
-    display: none;
+    /* display: none; */
     overflow: hidden;
     height: 70vh;
     text-align: center;
+
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
     
 }
 
@@ -36,7 +43,22 @@ img {
     
 }
 
-.down, .up {
+#down {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #444;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+#up {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -52,15 +74,15 @@ img {
 }
 
 
-.up {
+#up {
     top: 0;
 }
 
-.down {
+#down {
     bottom: 0;
 }
 
-.up:hover, .down:hover {
+#up:hover, #down:hover {
     background-color: rgba(240, 240, 240, 0.8);
 }
 
