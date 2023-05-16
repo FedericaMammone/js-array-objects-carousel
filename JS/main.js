@@ -23,13 +23,7 @@ const images = [
 ];
 
 // variabili
-
-
-
 const container = document.getElementById("items-container");
-const arrayImg = document.querySelectorAll('.item img');
-console.log(arrayImg);
-
 
 // creato ciclo con oggetti dell'array e aggiunti al dom
 
@@ -55,10 +49,6 @@ images.forEach((element) => {
         container.innerHTML += scheda;
         }
     );
-
-
-
-
 
 
 const buttonDown = document.getElementById("down");
@@ -105,6 +95,7 @@ function vaiGiu() {
         // aggiungo active
         arrayItemSchede[activeScheda].classList.add('active');
 
+        console.log(vaiGiu);
     }
 }
 
@@ -131,7 +122,7 @@ function vaiSu() {
         // aggiungo active
         arrayItemSchede[activeScheda].classList.add('active');
 
-        activeScheda = activeScheda + 1;
+       
     }
     
 }
