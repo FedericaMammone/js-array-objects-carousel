@@ -45,26 +45,31 @@ images.forEach((element) => {
             </div>
             `
     
-        console.log(scheda);
+        // console.log(scheda);
         container.innerHTML += scheda;
         }
     );
 
 
 const buttonDown = document.getElementById("down");
+// console.log(buttonDown);
 const buttonUp = document.getElementById("up");
 
 
 // assegnazione classe active
 const activeScheda = document.querySelector('.item:first-child');
+console.log(activeScheda);
 activeScheda.classList.add('active');
+console.log(activeScheda);
 
 // prendo le immagini
 const arrayItemSchede = document.querySelectorAll('#items-container .item');
+console.log(arrayItemSchede);
 
 
 // seleziono freccia giù e aggiungo evento al click
 buttonDown.addEventListener('click', vaiGiu);
+
 
 // seleziono freccia su e aggiungo evento al click
 buttonUp.addEventListener('click', vaiSu);
@@ -76,24 +81,25 @@ let activeItem = 0;
 
 function vaiGiu() {
 
-    // torlgo active
-    if(activeScheda < (arrayItemSchede.lenght - 1)) {
-        arrayItemSchede[activeScheda].classList.remove('active');
+    // tolgo active
+    if(activeItem < (arrayItemSchede.lenght - 1)) {
+        arrayItemSchede[activeItem].classList.remove('active');
 
         activeItem++
 
         // aggiungo active al nuovo elemento
-        arrayItemSchede[activeScheda].classList.add('active');
-    }else if (activeItem === arrayItemSchede.length - 1 ) {
+        arrayItemSchede[activeItem].classList.add('active');
+
+    }else if (activeItem === (arrayItemSchede.length - 1) ) {
 
         // tolgo active
-        arrayItemSchede[activeScheda].classList.remove('active');
+        arrayItemSchede[activeItem].classList.remove('active');
 
         // torno alla prima
         activeItem = 0;
         
         // aggiungo active
-        arrayItemSchede[activeScheda].classList.add('active');
+        arrayItemSchede[activeItem].classList.add('active');
 
         console.log(vaiGiu);
     }
@@ -103,24 +109,24 @@ function vaiGiu() {
 // freccia su
 function vaiSu() {
 
-    if (activeScheda > 0) {
+    if (activeItem > 0) {
 
         // tolgo active
-        arrayItemSchede[activeScheda].classList.remove('active');
+        arrayItemSchede[activeItem].classList.remove('active');
 
         activeItem--;
 
         // aggiungo active
-        arrayItemSchede[activeScheda].classList.add('active');
+        arrayItemSchede[activeItem].classList.add('active');
     }else if(activeScheda === 0){
         // tolgo active
-        arrayItemSchede[activeScheda].classList.remove('active');
+        arrayItemSchede[activeItem].classList.remove('active');
 
         // torno alla prima
-        activeScheda = arrayItemSchede.length -1;
+        activeItem = arrayItemSchede.length -1;
 
         // aggiungo active
-        arrayItemSchede[activeScheda].classList.add('active');
+        arrayItemSchede[activeItem].classList.add('active');
 
        
     }
